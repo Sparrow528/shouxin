@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>守信出海 · 出海工具合集</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Helvetica Neue',sans-serif;background:#F8FAFC;color:#1E293B;padding-bottom:40px;-webkit-font-smoothing:antialiased}
+
+/* 头部 */
+.header{background:linear-gradient(135deg, #0F172A 0%, #1E293B 100%);color:#fff;padding:32px 20px 24px;text-align:center}
+.header h1{font-size:26px;font-weight:800;letter-spacing:1px;margin-bottom:4px}
+.header .sub{font-size:14px;color:#C8A84E;font-weight:500}
+.header p{font-size:13px;color:#94A3B8;margin-top:6px;line-height:1.6}
+
+/* 分类导航 */
+.cat-nav{display:flex;gap:8px;padding:14px 16px;overflow-x:auto;white-space:nowrap;background:#fff;border-bottom:1px solid #E2E8F0;position:sticky;top:0;z-index:10}
+.cat-nav a{display:inline-block;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:500;text-decoration:none;color:#64748B;background:#F1F5F9;transition:all 0.15s}
+.cat-nav a:active,.cat-nav a.active{color:#fff;background:#1E293B}
+
+/* 内容区 */
+.container{max-width:700px;margin:0 auto;padding:14px}
+
+/* 工具分类标题 */
+.cat-title{font-size:18px;font-weight:800;color:#0F172A;padding:18px 0 10px;margin-top:6px;border-bottom:2px solid #C8A84E;display:inline-block}
+.cat-desc{font-size:13px;color:#94A3B8;margin:6px 0 14px}
+
+/* 工具卡片 */
+.tool-card{background:#fff;border-radius:14px;padding:20px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04)}
+.tool-card:last-child{margin-bottom:0}
+.tool-tag{display:inline-block;font-size:10px;font-weight:600;color:#fff;background:#C8A84E;border-radius:4px;padding:2px 8px;margin-bottom:8px}
+.tool-card h2{font-size:18px;font-weight:700;color:#0F172A;margin-bottom:10px;line-height:1.5}
+.tool-content{font-size:14px;color:#475569;line-height:1.9;margin-bottom:16px}
+.tool-content strong{color:#0F172A}
+.tool-content ul{padding-left:18px;margin:8px 0}
+.tool-content li{margin-bottom:6px}
+.tool-content .highlight{background:#FFFBEB;border-left:3px solid #C8A84E;padding:10px 14px;border-radius:6px;margin:12px 0;font-size:13px}
+.tool-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+.tool-content th,.tool-content td{border:1px solid #E2E8F0;padding:8px 10px;text-align:left}
+.tool-content th{background:#F8FAFC;font-weight:600;color:#64748B}
+.tool-content a{color:#1a237e;text-decoration:underline}
+
+.footer{text-align:center;padding:30px 16px 20px}
+.footer p{font-size:12px;color:#94A3B8;line-height:1.8}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>出海工具合集</h1>
+    <div class="sub">守信出海 · 中国企业出海工具箱</div>
+    <p>ODI备案 · 跨境财税 · 架构设计 · 地区指南<br>每天学会一个工具，出海少踩一个坑</p>
+</div>
+
+<div class="cat-nav">
+    <a href="#odi" class="active">ODI备案</a>
+    <a href="#tax">跨境财税</a>
+    <a href="#structure">架构设计</a>
+    <a href="#seasia">东南亚</a>
+    <a href="#middleeast">中东</a>
+    <a href="#latam">拉美</a>
+    <a href="#fund">资金合规</a>
+</div>
+
+<div class="container">
+
+    <!-- ========================================================== -->
+    <!-- ODI备案 -->
+    <!-- ========================================================== -->
+    <div id="odi" class="cat-title">ODI备案</div>
+    <p class="cat-desc">境外直接投资备案全流程工具包</p>
+
+    <div class="tool-card">
+        <div class="tool-tag">ODI备案</div>
+        <h2>ODI备案30步Checklist</h2>
+        <div class="tool-content">
+            <p>从项目立项到资金出境，每一步该准备什么材料、跑哪个部门、预计多久。</p>
+            <table>
+                <tr><th>阶段</th><th>步骤</th><th>负责部门</th><th>预计时长</th></tr>
+                <tr><td rowspan="4">内部立项</td><td>1. 项目可行性研究</td><td>内部/咨询</td><td>2-3周</td></tr>
+                <tr><td>2. 董事会决议</td><td>公司内部</td><td>1周</td></tr>
+                <tr><td>3. 投资方案编制</td><td>财务部</td><td>1-2周</td></tr>
+                <tr><td>4. 资金来源证明</td><td>财务部+银行</td><td>1周</td></tr>
+                <tr><td rowspan="5">发改委</td><td>5. 项目信息填报（线上）</td><td>发改委外资处</td><td>3天</td></tr>
+                <tr><td>6. 材料准备（项目申请报告）</td><td>内部+律所</td><td>1-2周</td></tr>
+                <tr><td>7. 提交审批</td><td>发改委</td><td>—</td></tr>
+                <tr><td>8. 反馈/补正</td><td>发改委</td><td>5-10个工作日</td></tr>
+                <tr><td>9. 领取备案通知书</td><td>发改委</td><td>3个工作日</td></tr>
+                <tr><td rowspan="4">商务部</td><td>10. 在线填报（商务部系统）</td><td>商务部</td><td>2天</td></tr>
+                <tr><td>11. 提交纸质材料</td><td>商务部</td><td>—</td></tr>
+                <tr><td>12. 审核</td><td>商务部合作司</td><td>5-10个工作日</td></tr>
+                <tr><td>13. 领取企业境外投资证书</td><td>商务部</td><td>3个工作日</td></tr>
+                <tr><td rowspan="4">外汇管理</td><td>14. 外汇登记（银行端）</td><td>外汇指定银行</td><td>3-5个工作日</td></tr>
+                <tr><td>15. 签署外汇登记表</td><td>银行</td><td>1天</td></tr>
+                <tr><td>16. 银行审核</td><td>银行合规部门</td><td>3个工作日</td></tr>
+                <tr><td>17. 领取外汇登记凭证</td><td>银行</td><td>1天</td></tr>
+                <tr><td>资金出境</td><td>18. 购汇+跨境汇款</td><td>银行</td><td>3-5个工作日</td></tr>
+                <tr><td rowspan="3">后续</td><td>19. 境外项目信息报送</td><td>商务部系统</td><td>每季度</td></tr>
+                <tr><td>20. 年度ODI存量权益登记</td><td>外汇局</td><td>每年6月前</td></tr>
+            </table>
+            <div class="highlight">💡 <strong>提示</strong>：总流程通常需要3-6个月，加急可缩短至2个月左右，具体取决于项目复杂度和当地发改委效率。</div>
+        </div>
+    </div>
+
+    <div class="tool-card">
+        <div class="tool-tag">ODI备案</div>
+        <h2>ODI备案被退回5大原因+修改模板</h2>
+        <div class="tool-content">
+            <p><strong>原因1：项目真实性存疑</strong></p>
+            <ul>
+                <li>常见问题：境外合作方无实质经营、项目缺乏商业逻辑</li>
+                <li>解决：补充尽调报告、合作协议、对方资信证明</li>
+            </ul>
+            <p><strong>原因2：资金来源说明不清晰</strong></p>
+            <ul>
+                <li>常见问题：自有资金/银行贷款比例不明确，无法证明合规来源</li>
+                <li>解决：提供银行流水、审计报告、贷款意向书</li>
+            </ul>
+            <p><strong>原因3：投资行业敏感</strong></p>
+            <ul>
+                <li>常见问题：涉及房地产、娱乐、体育等受限行业</li>
+                <li>解决：调整投资标的、或论证项目与主业的协同效应</li>
+            </ul>
+            <p><strong>原因4：材料不完整</strong></p>
+            <ul>
+                <li>常见问题：缺董事会决议、缺可行性报告、签字盖章不全</li>
+                <li>解决：用下面模板逐项自查</li>
+            </ul>
+            <p><strong>原因5：大额投资未说明合理性</strong></p>
+            <ul>
+                <li>常见问题：3亿美元以上项目缺少额外论证</li>
+                <li>解决：补充行业分析报告、资金来源明细、商业计划书</li>
+            </ul>
+            <div class="highlight">📝 <strong>修改说明模板</strong>：<br>
+            "关于[项目名称]补充说明<br>
+            尊敬[发改委/商务部名称]：<br>
+            我司于[日期]提交[项目名称]备案材料，现就审核意见补充说明如下：<br>
+            1. [针对退回意见逐条回复]<br>
+            2. [附补充材料清单]<br>
+            恳请审阅。此致<br>
+            [公司名称]（盖章）<br>
+            [日期]</div>
+        </div>
+    </div>
+
+    <div class="tool-card">
+        <div class="tool-tag">ODI备案</div>
+        <h2>ODI备案材料预审自查表</h2>
+        <div class="tool-content">
+            <p>提交前自检这20项——缺一项就是退回重来。</p>
+            <table>
+                <tr><th>#</th><th>检查项</th><th>状态</th></tr>
+                <tr><td>1</td><td>董事会决议/股东会决议（全体签字盖章）</td><td>□</td></tr>
+                <tr><td>2</td><td>项目可行性研究报告</td><td>□</td></tr>
+                <tr><td>3</td><td>境外投资申请书（发改委格式）</td><td>□</td></tr>
+                <tr><td>4</td><td>境外投资备案表（商务部格式）</td><td>□</td></tr>
+                <tr><td>5</td><td>营业执照复印件（盖公章）</td><td>□</td></tr>
+                <tr><td>6</td><td>最近年度审计报告</td><td>□</td></tr>
+                <tr><td>7</td><td>最近月度财务报表</td><td>□</td></tr>
+                <tr><td>8</td><td>资金来源说明（自有资金/银行贷款）</td><td>□</td></tr>
+                <tr><td>9</td><td>银行资信证明</td><td>□</td></tr>
+                <tr><td>10</td><td>境外合作方资信证明（如有）</td><td>□</td></tr>
+                <tr><td>11</td><td>境外合作协议/意向书（如有）</td><td>□</td></tr>
+                <tr><td>12</td><td>境外投资主体设立文件（如有）</td><td>□</td></tr>
+                <tr><td>13</td><td>投资主体股权结构图</td><td>□</td></tr>
+                <tr><td>14</td><td>法定代表人身份证明</td><td>□</td></tr>
+                <tr><td>15</td><td>经办人授权委托书</td><td>□</td></tr>
+                <tr><td>16</td><td>承诺书（材料真实性）</td><td>□</td></tr>
+                <tr><td>17</td><td>境外投资真实性承诺函</td><td>□</td></tr>
+                <tr><td>18</td><td>PDF电子版全套（按顺序命名）</td><td>□</td></tr>
+                <tr><td>19</td><td>纸质版一式两份（加盖骑缝章）</td><td>□</td></tr>
+                <tr><td>20</td><td>签字人权限证明（如非法人签字）</td><td>□</td></tr>
+            </table>
+            <div class="highlight">💡 <strong>自检技巧</strong>：打印出来逐项打勾，20项全过再去提交，一次通过率提升80%。</div>
+        </div>
+    </div>
+
+    <div class="tool-card">
+        <div class="tool-tag">ODI备案</div>
+        <h2>37号文备案 vs 7号文备案对比</h2>
+        <div class="tool-content">
+            <table>
+                <tr><th>对比项</th><th>37号文备案</th><th>7号文备案</th></tr>
+                <tr><td>适用范围</td><td>境内居民个人境外投资返程</td><td>境内居民企业境外投资</td></tr>
+                <tr><td>适用场景</td><td>VIE架构、红筹上市、个人境外股权</td><td>企业ODI、海外子公司设立</td></tr>
+                <tr><td>审批部门</td><td>外汇局（银行办理）</td><td>发改委+商务部+外汇局</td></tr>
+                <tr><td>申报主体</td><td>境内居民个人</td><td>境内企业</td></tr>
+                <tr><td>申报时点</td><td>境外公司设立前</td><td>境外投资实施前</td></tr>
+                <tr><td>审批周期</td><td>1-2周</td><td>3-6个月</td></tr>
+                <tr><td>后续义务</td><td>年度存量登记</td><td>季度报送+年度存量登记</td></tr>
+                <tr><td>违规后果</td><td>外汇管制处罚</td><td>取消备案资格+罚款</td></tr>
+            </table>
+            <div class="highlight">💡 <strong>一句话区分</strong>：你个人要设境外公司做返程投资→37号文；你公司要境外投资→7号文备案（即ODI）。</div>
+        </div>
+    </div>
+
+    <div class="tool-card">
+        <div class="tool-tag">ODI备案</div>
+        <h2>ODI备案时间线：正常vs加急对照</h2>
+        <div class="tool-content">
+            <table>
+                <tr><th>环节</th><th>正常流程</th><th>加急流程</th></tr>
+                <tr><td>内部立项+材料准备</td><td>3-4周</td><td>1-2周</td></tr>
+                <tr><td>发改委审批</td><td>15-20个工作日</td><td>7-10个工作日</td></tr>
+                <tr><td>商务部审批</td><td>10-15个工作日</td><td>5-7个工作日</td></tr>
+                <tr><td>外汇登记</td><td>5-7个工作日</td><td>3-5个工作日</td></tr>
+                <tr><td>资金出境</td><td>3-5个工作日</td><td>2-3个工作日</td></tr>
+                <tr><td><strong>总计</strong></td><td><strong>3-6个月</strong></td><td><strong>1-2个月</strong></td></tr>
+            </table>
+            <div class="highlight">💡 <strong>加急条件</strong>：项目属于鼓励类行业、材料完整度高、有专业机构协助。不是所有项目都能加急。</div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 跨境财税 -->
+    <!-- ========================================================== -->
+    <div id="tax" class="cat-title">跨境财税</div>
+    <p class="cat-desc">出海企业全球税务合规工具</p>
+
+    <div class="tool-card">
+        <div class="tool-tag">跨境财税</div>
+        <h2>跨境电商出海各国VAT速查</h2>
+        <div class="tool-content">
+            <table>
+                <tr><th>国家</th><th>标准增值税率</th><th>起征点</th><th>注册门槛</th></tr>
+                <tr><td>印尼</td><td>11%（2025年拟升至12%）</td><td>无（首年营业额<4.8亿IDR可免）</td><td>在印尼有固定营业场所或年销售额超阈值</td></tr>
+                <tr><td>泰国</td><td>7%</td><td>年营业额180万THB</td><td>在泰国有常设机构</td></tr>
+                <tr><td>越南</td><td>10%（部分商品8%）</td><td>年营业额1亿VND</td><td>有经营场所即可注册</td></tr>
+                <tr><td>马来西亚</td><td>8%（SST）</td><td>年营业额50万MYR</td><td>年营业额超阈值需注册</td></tr>
+                <tr><td>菲律宾</td><td>12%</td><td>年营业额300万PHP</td><td>在菲有实体或数字服务触及阈值</td></tr>
+                <tr><td>新加坡</td><td>9%</td><td>年营业额100万SGD</td><td>货物销售超阈值或自愿注册</td></tr>
+                <tr><td>沙特</td><td>15%</td><td>年营业额37.5万SAR</td><td>超阈值强制注册</td></tr>
+                <tr><td>阿联酋</td><td>5%</td><td>年营业额37.5万AED</td><td>超阈值强制注册</td></tr>
+                <tr><td>墨西哥</td><td>16%</td><td>无（数字服务需注册RFC）</td><td>外国电商需注册RFC方可运营</td></tr>
+            </table>
+            <div class="highlight">⚠️ <strong>注意</strong>：各国有不同的低税率/豁免政策，且政策频繁调整。建议在每个市场正式运营前咨询当地税务顾问。</div>
+        </div>
+    </div>
+
+    <div class="tool-card">
+        <div class="tool-tag">跨境财税</div>
+        <h2>东南亚税负对比速算表</h2>
+        <div class="tool-content">
+            <table>
+                <tr><th>国家</th><th>公司所得税</th><th>增值税</th><th>股息预提税</th><th>实际综合税负参考</th></tr>
+                <tr><td>新加坡</td><td>17%（首10万SGD减免后约4.5%）</td><td>9%（GST）</td><td>0%（单一税制）</td><td>低</td></tr>
+                <tr><td>印尼</td><td>22%</td><td>11%</td><td>20%（有税收协定可降低）</td><td>中等</td></tr>
+                <tr><td>越南</td><td>20%</td><td>10%</td><td>0%/5%/10%（视协定）</td><td>中等偏低</td></tr>
+                <tr><td>泰国</td><td>20%</td><td>7%</td><td>10%（有税收协定）</td><td>中等</td></tr>
+                <tr><td>菲律宾</td><td>25%</td><td>12%</td><td>15%/30%</td><td>中等偏高</td></tr>
+                <tr><td>马来西亚</td><td>24%（首60万MYR 15-17%）</td><td>8%（SST）</td><td>0%（单一税制）</td><td>中等偏低</td></tr>
+            </table>
+            <div class="highlight">💡 <strong>速算公式</strong>：综合税负≈公司税+(1-公司税率)×股息预提税率。新加坡最低，菲律宾最高。</div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 架构设计 -->
+    <!-- ========================================================== -->
+    <div id="structure" class="cat-title">架构设计</div>
+    <p class="cat-desc">出海控股架构与法律实体选择</p>
+
+    <div class="tool-card">
+        <div class="tool-tag">架构设计</div>
+        <h2>出海架构对比卡：新加坡vs香港vs阿联酋</h2>
+        <div class="tool-content">
+            <table>
+                <tr><th>对比项</th><th>新加坡</th><th>香港</th><th>阿联酋</th></tr>
+                <tr><td>公司税率</td><td>17%（首10万SGD实际约4.5%）</td><td>16.5%（首200万HKD优惠至8.25%）</td><td>9%（利润>37.5万AED）</td></tr>
+                <tr><td>股息收入免税</td><td>✓ 单层税制</td><td>✓ 单层税制</td><td>✓ 自由区免税</td></tr>
+                <tr><td>资本利得税</td><td>无</td><td>无</td><td>无</td></tr>
+                <tr><td>外汇管制</td><td>无</td><td>无</td><td>无</td></tr>
+                <tr><td>实体运营要求</td><td>需本地董事+实际办公</td><td>需本地董事+注册地址</td><td>自由区需实体办公</td></tr>
+                <tr><td>银行开户难度</td><td>中等（KYC严格）</td><td>中等</td><td>中等偏难</td></tr>
+                <tr><td>税收协定网络</td><td>90+国家</td><td>45+国家</td><td>100+国家</td></tr>
+                <tr><td>运营成本参考</td><td>年维持成本约1.5-3万SGD</td><td>年维持成本约1-2万HKD</td><td>年维持成本约2-5万AED</td></tr>
+                <tr><td>适合场景</td><td>科技/金融/总部</td><td>贸易/持股/金融</td><td>中东业务/贸易/资产管理</td></tr>
+            </table>
+            <div class="highlight">💡 <strong>建议</strong>：东南亚业务首选新加坡控股，中东业务首选阿联酋自由区，纯持股可选香港。不少中企用新加坡控股+阿联酋运营的双层架构。</div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 东南亚 -->
+    <!-- ========================================================== -->
+    <div id="seasia" class="cat-title">东南亚</div>
+    <p class="cat-desc">重点国别投资指南</p>
+
+    <div class="tool-card">
+        <div class="tool-tag">东南亚</div>
+        <h2>印尼投资负面清单中文对照版（2025）</h2>
+        <div class="tool-content">
+            <p>基于2025年新版负面清单（Presidential Regulation on Investment List/DNI），行业分类如下：</p>
+            <table>
+                <tr><th>类别</th><th>行业举例</th><th>外资限制</th></tr>
+                <tr><td>A：完全禁止</td><td>赌博、毒品、化学武器、濒危物种贸易</td><td>外商100%禁止</td></tr>
+                <tr><td>B：有条件开放</td><td>教育（外资≤49%）、医疗（外资≤67%）、电信（外资≤67%）</td><td>有股权比例上限</td></tr>
+                <tr><td>C：完全开放</td><td>制造业、数字经济、可再生能源、基础设施</td><td>可100%外资</td></tr>
+                <tr><td>D：特别许可</td><td>矿业、石油天然气、银行业</td><td>需特定行业许可</td></tr>
+            </table>
+            <div class="highlight">📌 <strong>重点</strong>：2025年新版清单比旧版开放了更多行业——制造业几乎全部开放，是当前中资出海印尼最大的窗口期。</div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 中东 -->
+    <!-- ========================================================== -->
+    <div id="middleeast" class="cat-title">中东</div>
+    <p class="cat-desc">中东市场拓展指南</p>
+
+    <div class="tool-card">
+        <div class="tool-tag">中东</div>
+        <h2>沙特公司注册全流程图</h2>
+        <div class="tool-content">
+            <table>
+                <tr><th>步骤</th><th>内容</th><th>预计时间</th></tr>
+                <tr><td>1. 确定实体类型</td><td>有限责任公司(LLC)、分公司(Branch)、合资公司(JV)</td><td>1-2周</td></tr>
+                <tr><td>2. 确定保人制度处理方案</td><td>传统保人 vs 新公司法下无保人自由区</td><td>1周</td></tr>
+                <tr><td>3. 公司名称预留</td><td>通过MISA/MCIT系统预审</td><td>1-3天</td></tr>
+                <tr><td>4. 起草公司章程</td><td>阿拉伯语公证</td><td>1-2周</td></tr>
+                <tr><td>5. 商业注册（CR）</td><td>通过MISA门户提交</td><td>2-3周</td></tr>
+                <tr><td>6. 商会注册</td><td>所在城市商会</td><td>1周</td></tr>
+                <tr><td>7. 税务登记</td><td>ZATCA（沙特天课和税务总局）</td><td>1-2周</td></tr>
+                <tr><td>8. 社会保险注册</td><td>GOSI</td><td>1周</td></tr>
+                <tr><td>9. 银行开户</td><td>本地银行</td><td>4-8周</td></tr>
+                <tr><td><strong>总计</strong></td><td></td><td><strong>2-4个月</strong></td></tr>
+            </table>
+            <div class="highlight">🚩 <strong>2025年变化</strong>：新公司法取消了大部分行业的强制保人要求，自由区内可100%外资独资。但仍需注意当地化要求（Saudization）。</div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 拉美 -->
+    <!-- ========================================================== -->
+    <div id="latam" class="cat-title">拉美</div>
+    <p class="cat-desc">拉丁美洲市场税务与合规</p>
+
+    <div class="tool-card">
+        <div class="tool-tag">拉美</div>
+        <h2>墨西哥近岸外包税务陷阱清单</h2>
+        <div class="tool-content">
+            <table>
+                <tr><th>陷阱</th><th>风险</th><th>应对</th></tr>
+                <tr><td>ICP制度（Immex/Prosec）</td><td>临时进口的机器/原材料6年内不可转售，否则触发追溯补税</td><td>ICP注册+严格台账管理</td></tr>
+                <tr><td>转让定价</td><td>墨西哥关联交易须符合独立交易原则，否则补税+罚款</td><td>准备转让定价文档（TPD）+本地文档</td></tr>
+                <tr><td>常设机构认定</td><td>中国员工在墨短期工作超过183天/年，可能被认定常设机构</td><td>控制停留天数+避免签约权</td></tr>
+                <tr><td>增值税调整</td><td>某些服务跨境时被征收16%IVA且不可退税</td><td>合同明确费用是否含税</td></tr>
+                <tr><td>利润汇回限制</td><td>股息预提税10%（有税收协定）vs 35%（无协定）</td><td>通过协定友好架构（如荷兰控股）</td></tr>
+            </table>
+            <div class="highlight">⚡ <strong>墨西哥热≠容易做</strong>：近岸外包确实火，但税务合规要求是中企最容易忽视的地方。建议入场前做一次税务健康检查。</div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- 资金合规 -->
+    <!-- ========================================================== -->
+    <div id="fund" class="cat-title">资金合规</div>
+    <p class="cat-desc">跨境资金出境与回流通道</p>
+
+    <div class="tool-card">
+        <div class="tool-tag">资金合规</div>
+        <h2>出海资金出境5条合规路径对比</h2>
+        <div class="tool-content">
+            <table>
+                <tr><th>路径</th><th>适用场景</th><th>额度</th><th>审批周期</th><th>主要限制</th></tr>
+                <tr><td>ODI（境外直接投资）</td><td>设立海外子公司、并购、参股</td><td>无上限</td><td>3-6个月</td><td>需发改委+商务部双备案</td></tr>
+                <tr><td>QDII（合格境内机构投资者）</td><td>证券投资、理财产品</td><td>额度制</td><td>1-2个月</td><td>仅限持牌金融机构</td></tr>
+                <tr><td>跨境直贷</td><td>海外子公司从境内母公司借款</td><td>净资产30%或境外投资额</td><td>2-4周</td><td>需外债备案+合同</td></tr>
+                <tr><td>内保外贷</td><td>境内资产抵押担保境外贷款</td><td>无硬性上限</td><td>2-4周</td><td>银行审批+外汇局事后报备</td></tr>
+                <tr><td>贸易项下</td><td>货物贸易/服务贸易</td><td>合同金额</td><td>实时</td><td>需真实贸易背景+报关单</td></tr>
+            </table>
+            <div class="highlight">💡 <strong>选择建议</strong>：中长期出海→ODI；短期资金周转→跨境直贷；有资产可抵押→内保外贷；有贸易背景→贸易项下。</div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>守信出海 · 工具合集持续更新中</p>
+    <p style="margin-top:4px">ODI备案 · 跨境财税 · 架构设计 · 地区指南</p>
+    <p style="margin-top:10px;font-size:11px">本工具仅供参考，具体业务请咨询专业顾问</p>
+</div>
+
+</body>
+</html>
