@@ -3,37 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>守信出海 · 中国企业出海第一站</title>
+<title>守信出海 · 中国企业出海第一站 | ODI备案·跨境财税·东南亚落地</title>
+<meta name="description" content="守信出海提供ODI备案工具、跨境财税指南、真实出海案例和每日早报。帮助中国企业少踩坑，顺利出海东南亚、中东、拉美。">
+<meta property="og:title" content="守信出海 · 中国企业出海第一站">
+<meta property="og:description" content="ODI备案工具·跨境财税·真实案例·每日早报">
+<meta property="og:image" content="https://sparrow528.github.io/shouxin/og-image.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Helvetica Neue',sans-serif;background:#F8FAFC;color:#1E293B;min-height:100vh;display:flex;flex-direction:column}
-.header{background:linear-gradient(135deg, #0F172A 0%, #1E293B 100%);color:#fff;padding:48px 20px 36px;text-align:center}
-.header h1{font-size:32px;font-weight:800;letter-spacing:2px;margin-bottom:6px}
-.header .sub{font-size:16px;color:#C8A84E;font-weight:500;margin-bottom:8px}
-.header p{font-size:14px;color:#94A3B8;line-height:1.6;max-width:400px;margin:0 auto}
-.container{max-width:500px;margin:0 auto;padding:24px 16px;flex:1}
-.card{background:#fff;border-radius:14px;padding:20px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);text-decoration:none;display:block;color:#1E293B;transition:all 0.15s}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Helvetica Neue',sans-serif;background:#F8FAFC;color:#1E293B;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+
+/* ── Header ── */
+.header{background:linear-gradient(160deg, #0F172A 0%, #1E3A5F 50%, #1E293B 100%);color:#fff;padding:36px 20px 28px;text-align:center;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 20%, rgba(200,168,78,0.08) 0%, transparent 60%),radial-gradient(ellipse at 70% 80%, rgba(200,168,78,0.05) 0%, transparent 50%);pointer-events:none}
+.header-logo{width:64px;height:64px;border-radius:14px;margin-bottom:12px;box-shadow:0 4px 20px rgba(0,0,0,0.3);position:relative;z-index:1}
+.header h1{font-size:28px;font-weight:800;letter-spacing:2px;position:relative;z-index:1}
+.header .slogan{font-size:15px;color:#C8A84E;font-weight:600;margin:4px 0 8px;position:relative;z-index:1}
+.header .desc{font-size:13px;color:#94A3B8;line-height:1.7;max-width:360px;margin:0 auto;position:relative;z-index:1}
+.header-nav{display:flex;gap:10px;justify-content:center;margin-top:18px;position:relative;z-index:1;flex-wrap:wrap}
+.header-nav a{display:inline-block;padding:8px 20px;border:1.5px solid #C8A84E;border-radius:24px;color:#C8A84E;font-size:13px;font-weight:600;text-decoration:none;transition:all 0.2s}
+.header-nav a:active{background:#C8A84E;color:#0F172A}
+
+/* ── Container ── */
+.container{max-width:500px;margin:0 auto;padding:20px 16px;flex:1}
+
+/* ── Cards ── */
+.card{background:#fff;border-radius:16px;padding:22px 20px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.04);text-decoration:none;display:block;color:#1E293B;transition:all 0.15s;position:relative;overflow:hidden}
 .card:active{transform:scale(0.97);background:#F8FAFC}
-.card-icon{font-size:28px;margin-bottom:6px}
-.card-title{font-size:17px;font-weight:700;margin-bottom:4px}
-.card-desc{font-size:13px;color:#64748B;line-height:1.6}
-.card-tag{display:inline-block;font-size:10px;font-weight:600;color:#fff;background:#C8A84E;border-radius:4px;padding:2px 8px;margin-top:8px}
-.qr-section{text-align:center;padding:20px 16px;background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04)}
+.card-icon{font-size:32px;margin-bottom:8px}
+.card-title{font-size:17px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.card-desc{font-size:13px;color:#64748B;line-height:1.7}
+.card-tag{display:inline-block;font-size:10px;font-weight:600;color:#fff;background:#C8A84E;border-radius:4px;padding:2px 8px;margin-top:10px}
+.card .badge-new{position:absolute;top:14px;right:14px;font-size:10px;font-weight:700;color:#C8A84E;background:rgba(200,168,78,0.12);padding:3px 10px;border-radius:10px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.6}}
+
+/* ── Update bar ── */
+.update-bar{background:#fff;border-radius:14px;padding:18px 20px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.04)}
+.update-bar .title{font-size:14px;font-weight:700;color:#0F172A;margin-bottom:10px}
+.update-bar .title span{font-size:11px;color:#94A3B8;font-weight:400;margin-left:8px}
+.update-item{display:flex;align-items:center;gap:10px;padding:8px 0;text-decoration:none;color:#1E293B;font-size:13px;border-bottom:1px solid #F1F5F9}
+.update-item:last-child{border-bottom:none}
+.update-dot{width:6px;height:6px;border-radius:50%;background:#C8A84E;flex-shrink:0}
+.update-date{font-size:11px;color:#94A3B8;white-space:nowrap}
+
+/* ── Trust signals ── */
+.trust-bar{display:flex;gap:12px;justify-content:center;padding:0 0 8px;flex-wrap:wrap}
+.trust-item{text-align:center;padding:10px 16px;background:#fff;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,0.04);min-width:80px}
+.trust-num{font-size:22px;font-weight:800;color:#C8A84E}
+.trust-label{font-size:10px;color:#94A3B8;margin-top:2px}
+
+/* ── QR ── */
+.qr-section{text-align:center;padding:20px 16px;background:#fff;border-radius:16px;box-shadow:0 1px 4px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.04)}
 .qr-section p{font-size:13px;color:#64748B;margin-bottom:10px}
-.placeholder-qr{width:120px;height:120px;background:#F1F5F9;border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:11px;color:#94A3B8}
-.footer{text-align:center;padding:24px 16px 20px}
+.qr-section img{width:140px;height:140px;border-radius:10px;display:block;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.qr-section .qr-url{font-size:12px;color:#64748B;font-weight:500;margin-top:8px}
+.qr-section .qr-desc{font-size:11px;color:#94A3B8;margin-top:2px}
+
+/* ── Footer ── */
+.footer{text-align:center;padding:28px 16px 24px;background:#fff;border-top:1px solid #E2E8F0;margin-top:auto}
+.footer-nav{display:flex;gap:16px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+.footer-nav a{font-size:13px;color:#C8A84E;text-decoration:none;font-weight:500;padding:4px 12px}
+.footer-nav a:active{color:#0F172A}
 .footer p{font-size:11px;color:#94A3B8;line-height:1.8}
+
+/* ── 响应式 ── */
+@media(min-width:600px){.header{padding:48px 20px 36px}.header h1{font-size:32px}.container{padding:28px 16px}}
 </style>
 </head>
 <body>
 
+<!-- ═══ Header ═══ -->
 <div class="header">
+    <img class="header-logo" src="./logo.png" alt="守信出海" onerror="this.style.display='none'">
     <h1>守信出海</h1>
-    <div class="sub">中国企业出海第一站</div>
-    <p>ODI备案 · 跨境财税 · 东南亚中东拉美落地<br>每天一条工具，出海少踩一个坑</p>
+    <div class="slogan">中国企业出海第一站</div>
+    <p class="desc">ODI备案 · 跨境财税 · 架构设计 · 东南亚中东拉美落地<br>每天一条工具，出海少踩一个坑</p>
+    <div class="header-nav">
+        <a href="./出海工具合集.html">📋 工具合集</a>
+        <a href="./案例库.html">📚 案例库</a>
+        <a href="./出海早报_2026-06-19.html">🌏 今日早报</a>
+    </div>
 </div>
 
+<!-- ═══ Container ═══ -->
 <div class="container">
+
+    <!-- 信任信号 -->
+    <div class="trust-bar">
+        <div class="trust-item"><div class="trust-num">12+</div><div class="trust-label">出海工具</div></div>
+        <div class="trust-item"><div class="trust-num">6</div><div class="trust-label">实战案例</div></div>
+        <div class="trust-item"><div class="trust-num">每日</div><div class="trust-label">早报更新</div></div>
+    </div>
+
+    <!-- 卡片1：工具合集 -->
     <a href="./出海工具合集.html" class="card">
         <div class="card-icon">🧰</div>
         <div class="card-title">出海工具合集</div>
@@ -41,22 +102,36 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Helvetica Neue',
         <div class="card-tag">12个工具 · 持续更新</div>
     </a>
 
+    <!-- 卡片2：案例库 NEW -->
+    <a href="./案例库.html" class="card">
+        <span class="badge-new">🆕 NEW</span>
+        <div class="card-icon">📚</div>
+        <div class="card-title">出海案例库</div>
+        <div class="card-desc">真实中企出海故事：ODI踩坑、跨境省税、架构翻车——每个案例配有口播脚本，直接拿去拍短视频</div>
+        <div class="card-tag">6个案例 · 定期新增</div>
+    </a>
+
+    <!-- 本周更新 -->
     <div class="update-bar">
-        <div class="title">📌 本周更新 <span>每周3-4次 · 扫码即见新内容</span></div>
-        <div class="update-list">
-            <a href="./出海工具合集.html#odi-fix" class="update-item">
-                <span class="update-dot"></span>
-                <span style="flex:1">ODI备案被退回5大原因+修改模板</span>
-                <span class="update-date">06/19</span>
-            </a>
-            <a href="./出海工具合集.html#odi-timeline" class="update-item">
-                <span class="update-dot"></span>
-                <span style="flex:1">ODI备案时间线：正常vs加急对照</span>
-                <span class="update-date">06/16</span>
-            </a>
-        </div>
+        <div class="title">📌 本周更新 <span>6/16 - 6/19</span></div>
+        <a href="./案例库.html" class="update-item">
+            <span class="update-dot"></span>
+            <span style="flex:1">🆕 出海案例库上线 — 6个真实案例+口播脚本</span>
+            <span class="update-date">06/19</span>
+        </a>
+        <a href="./出海工具合集.html#odi-fix" class="update-item">
+            <span class="update-dot"></span>
+            <span style="flex:1">ODI备案被退回5大原因+修改模板</span>
+            <span class="update-date">06/19</span>
+        </a>
+        <a href="./出海工具合集.html#odi-timeline" class="update-item">
+            <span class="update-dot"></span>
+            <span style="flex:1">ODI备案时间线：正常vs加急对照</span>
+            <span class="update-date">06/16</span>
+        </a>
     </div>
 
+    <!-- 卡片3：今日早报 -->
     <a href="./出海早报_2026-06-19.html" class="card">
         <div class="card-icon">🌏</div>
         <div class="card-title">今日出海早报</div>
@@ -64,17 +139,25 @@ body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Helvetica Neue',
         <div class="card-tag">2026-06-19 · 每日更新</div>
     </a>
 
+    <!-- QR码 -->
     <div class="qr-section">
         <p>📱 扫码收藏「守信出海」</p>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAACi0lEQVR4nO2bQW7bMBBF/5QEsqQAH8BHoW+QIwU5Um8gHsUHMEAtA1D4XQwpKQmCNqismsVoJVNv8YHBzJCfYyG+86Qf38IB44033njjjTf+K17q44E0rD9FgKm9Xg7UY/zOfCRJZkBeriJkBjiGAgCOJMn3/L31GL8zP9UM5RhIIBQgXp80qprYx+ox/k58EhGkwRHA3KryP9Rj/F/x/sNvQbh5AQREKJ6YjtVj/H34QHIEwHHy0E4s4iEXACTL0XqM35VPIiIyAPKSHeUCR8TcirTupI/UY/xOvNbn1aSsBTm8CdMA4fbbEXqM35eHHn5irgmrRVoLcih6cEJkUY7jo+k3/g/5Wfh6fhMgFIjo/tkRmDz4OjjK5Vg9xu/CY2NeaMMNJJlrfMns1PhQC8TytzO+1WeSHENBta6wOB2o5drqc5f8kr9Lwmo7BjjqWnMqLX975Ju/EW4ChAyk55snJlckanRdAeAox+gxfl++xXd6omDypb6FAqYhowV+btyj6Tf+N49W5GUHpYekej5aKnWw/ts3n84F7Sw0CwBHjpiXmwZALkfqMX4nfnO/QKDZzOk5Q2IGgemEWrMP0WP8vrzGV+LVA5hORSJnL/HqCzGdigAOEjmb/9wn3/pqqA13ndqoX7P13575d/7GupYB9Z8BtOkdi2+3vIY2NmtD1vvBSHKd3nlU/cZ/+WyH51C95u0QlnrS5l91ym/rM5ejb2TZ5rTeOVh8O+ZbBRYZ6opc4KjjdjHPVp//D57UqVhHRL6JmliYbD62U/7T/GT8OQuTuMI0ZAowe6QzYf5Gl/yn/ju2S0K9H7T5nL75j/vnupYd2/2+7Z975sX+32288cYbb7zxh/O/AC6T3qx1lKrnAAAAAElFTkSuQmCC" alt="扫码访问" style="width:140px;height:140px;border-radius:8px;display:block;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,0.1)">
-        <p style="margin-top:8px;font-size:12px;color:#64748B;font-weight:500">https://sparrow528.github.io/shouxin/</p>
-        <p style="margin-top:4px;font-size:11px;color:#94A3B8">出海工具合集 · 每日早报 · 持续更新</p>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAACi0lEQVR4nO2bQW7bMBBF/5QEsqQAH8BHoW+QIwU5Um8gHsUHMEAtA1D4XQwpKQmCNqismsVoJVNv8YHBzJCfYyG+86Qf38IB44033njjjTf+K17q44E0rD9FgKm9Xg7UY/zOfCRJZkBeriJkBjiGAgCOJMn3/L31GL8zP9UM5RhIIBQgXp80qprYx+ox/k58EhGkwRHA3KryP9Rj/F/x/sNvQbh5AQREKJ6YjtVj/H34QHIEwHHy0E4s4iEXACTL0XqM35VPIiIyAPKSHeUCR8TcirTupI/UY/xOvNbn1aSsBTm8CdMA4fbbEXqM35eHHn5irgmrRVoLcih6cEJkUY7jo+k3/g/5Wfh6fhMgFIjo/tkRmDz4OjjK5Vg9xu/CY2NeaMMNJJlrfMns1PhQC8TytzO+1WeSHENBta6wOB2o5drqc5f8kr9Lwmo7BjjqWnMqLX975Ju/EW4ChAyk55snJlckanRdAeAox+gxfl++xXd6omDypb6FAqYhowV+btyj6Tf+N49W5GUHpYekej5aKnWw/ts3n84F7Sw0CwBHjpiXmwZALkfqMX4nfnO/QKDZzOk5Q2IGgemEWrMP0WP8vrzGV+LVA5hORSJnL/HqCzGdigAOEjmb/9wn3/pqqA13ndqoX7P13575d/7GupYB9Z8BtOkdi2+3vIY2NmtD1vvBSHKd3nlU/cZ/+WyH51C95u0QlnrS5l91ym/rM5ejb2TZ5rTeOVh8O+ZbBRYZ6opc4KjjdjHPVp//D57UqVhHRL6JmliYbD62U/7T/GT8OQuTuMI0ZAowe6QzYf5Gl/yn/ju2S0K9H7T5nL75j/vnupYd2/2+7Z975sX+32288cYbb7zxh/O/AC6T3qx1Krl6AAAAAElFTkSuQmCC" alt="扫码访问">
+        <p class="qr-url">sparrow528.github.io/shouxin</p>
+        <p class="qr-desc">出海工具合集 · 案例库 · 每日早报</p>
     </div>
 </div>
 
+<!-- ═══ Footer ═══ -->
 <div class="footer">
-    <p>守信出海 · 本报告仅供参考，不构成投资建议</p>
-    <p style="margin-top:4px">数据来源：商务部 · 各国投资局 · 权威财经媒体</p>
+    <div class="footer-nav">
+        <a href="./index.html">🏠 首页</a>
+        <a href="./出海工具合集.html">🧰 工具合集</a>
+        <a href="./案例库.html">📚 案例库</a>
+        <a href="./出海早报_2026-06-19.html">🌏 早报</a>
+    </div>
+    <p>守信出海 © 2026 · 本报告仅供参考，不构成法律/投资建议</p>
+    <p>数据来源：商务部 · 各国投资局 · 权威财经媒体</p>
 </div>
 
 </body>

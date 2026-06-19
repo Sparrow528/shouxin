@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>出海案例库 · 守信出海 | 真实中企出海故事+口播脚本</title>
+<meta name="description" content="深圳电子厂ODI备案3次过审、新加坡架构省200万税……6个真实出海案例，每个配有30秒口播脚本。">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei','Helvetica Neue',sans-serif;background:#F8FAFC;color:#1E293B;padding-bottom:40px;-webkit-font-smoothing:antialiased}
+
+/* ── Header ── */
+.header{background:linear-gradient(160deg, #0F172A 0%, #1E3A5F 50%, #1E293B 100%);color:#fff;padding:24px 20px 20px;position:relative;overflow:hidden}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 20%, rgba(200,168,78,0.08) 0%, transparent 60%);pointer-events:none}
+.header-back{display:inline-block;color:#C8A84E;font-size:13px;text-decoration:none;margin-bottom:10px;position:relative;z-index:1}
+.header h1{font-size:24px;font-weight:800;letter-spacing:1px;position:relative;z-index:1}
+.header .sub{font-size:13px;color:#94A3B8;margin-top:4px;position:relative;z-index:1;line-height:1.6}
+
+/* ── 分类导航 ── */
+.cat-nav{display:flex;gap:8px;padding:12px 16px;overflow-x:auto;white-space:nowrap;background:#fff;border-bottom:1px solid #E2E8F0;position:sticky;top:0;z-index:10;-webkit-overflow-scrolling:touch}
+.cat-nav a{display:inline-block;padding:6px 16px;border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;color:#64748B;background:#F1F5F9;transition:all 0.15s;flex-shrink:0}
+.cat-nav a.active,.cat-nav a:target{color:#fff;background:#0F172A}
+
+/* ── 容器 ── */
+.container{max-width:700px;margin:0 auto;padding:16px}
+
+/* ── 案例卡片 ── */
+.case-card{background:#fff;border-radius:16px;padding:22px 20px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,0.05);border:1px solid rgba(0,0,0,0.04)}
+.case-card:target{box-shadow:0 4px 20px rgba(200,168,78,0.15);border-color:#C8A84E}
+.case-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.case-tag{font-size:10px;font-weight:600;padding:3px 10px;border-radius:10px;color:#fff}
+.tag-odi{background:#1a7a5a}
+.tag-tax{background:#1565c0}
+.tag-struct{background:#6d28d9}
+.tag-asia{background:#0d9488}
+.tag-me{background:#b45309}
+.tag-latam{background:#be185d}
+.case-num{font-size:11px;color:#94A3B8}
+.case-title{font-size:18px;font-weight:700;color:#0F172A;margin-bottom:10px;line-height:1.4}
+.case-meta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+.case-meta-item{font-size:12px;color:#64748B}
+.case-meta-item strong{color:#0F172A}
+.case-bg{font-size:13px;color:#475569;line-height:1.8;margin-bottom:12px;padding:12px 14px;background:#F8FAFC;border-radius:10px;border-left:3px solid #E2E8F0}
+.case-lessons{margin-bottom:14px}
+.case-lesson{font-size:13px;color:#475569;padding:4px 0 4px 20px;position:relative;line-height:1.7}
+.case-lesson::before{content:'▸';position:absolute;left:0;color:#C8A84E;font-size:11px;top:5px}
+.case-lesson strong{color:#0F172A}
+.case-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:8px 18px;border-radius:20px;font-size:12px;font-weight:600;text-decoration:none;transition:all 0.15s;cursor:pointer;border:none}
+.btn-script{background:#C8A84E;color:#fff}
+.btn-script:active{background:#b8963a}
+.btn-link{background:#F1F5F9;color:#64748B}
+.btn-link:active{background:#E2E8F0}
+
+/* ── 口播脚本模态 ── */
+.script-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.85);z-index:100;overflow-y:auto;padding:20px;-webkit-overflow-scrolling:touch}
+.script-modal.show{display:flex;align-items:center;justify-content:center}
+.script-box{background:#fff;border-radius:16px;max-width:480px;width:100%;padding:24px 20px;position:relative}
+.script-close{position:absolute;top:12px;right:14px;width:32px;height:32px;border-radius:50%;background:#F1F5F9;border:none;font-size:18px;color:#64748B;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.script-box h3{font-size:16px;color:#0F172A;margin-bottom:4px}
+.script-box .script-meta{font-size:11px;color:#94A3B8;margin-bottom:16px}
+.script-vision{font-size:11px;color:#C8A84E;background:rgba(200,168,78,0.08);padding:6px 12px;border-radius:8px;margin-bottom:14px}
+.script-text{font-size:14px;line-height:2.2;white-space:pre-wrap;padding:18px;background:linear-gradient(135deg,#FFFBEB,#FFF8E1);border-radius:12px;border:1px solid rgba(200,168,78,0.2);margin-bottom:14px;color:#1E293B}
+.script-stats{display:flex;gap:16px;font-size:11px;color:#94A3B8;margin-bottom:14px;flex-wrap:wrap}
+.script-copy{width:100%;padding:12px;border-radius:10px;background:#0F172A;color:#fff;font-size:13px;font-weight:600;border:none;cursor:pointer}
+
+/* ── 底部 CTA ── */
+.cta-section{text-align:center;padding:28px 16px;background:linear-gradient(135deg,#0F172A,#1E293B);border-radius:16px;color:#fff;margin-top:8px}
+.cta-section h2{font-size:18px;margin-bottom:6px}
+.cta-section p{font-size:13px;color:#94A3B8;margin-bottom:16px;line-height:1.7}
+.cta-section .btn-script{background:#C8A84E;color:#0F172A;font-size:14px;padding:10px 28px}
+
+/* ── Footer ── */
+.footer{text-align:center;padding:28px 16px 24px;background:#fff;border-top:1px solid #E2E8F0;margin-top:16px}
+.footer-nav{display:flex;gap:16px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+.footer-nav a{font-size:13px;color:#C8A84E;text-decoration:none;font-weight:500;padding:4px 12px}
+.footer p{font-size:11px;color:#94A3B8;line-height:1.8}
+
+@media(min-width:600px){.case-title{font-size:20px}.script-box{padding:32px 28px}}
+</style>
+</head>
+<body>
+
+<!-- ═══ Header ═══ -->
+<div class="header">
+    <a class="header-back" href="./index.html">← 返回首页</a>
+    <h1>📚 出海案例库</h1>
+    <div class="sub">真实中企出海故事：成功经验 + 失败教训<br>每个案例配有口播脚本，直接拿去拍短视频</div>
+</div>
+
+<!-- ═══ 分类导航 ═══ -->
+<div class="cat-nav">
+    <a href="#all" class="active">全部</a>
+    <a href="#odi">ODI备案</a>
+    <a href="#tax">跨境财税</a>
+    <a href="#struct">架构设计</a>
+    <a href="#asia">东南亚</a>
+    <a href="#me">中东</a>
+    <a href="#latam">拉美</a>
+</div>
+
+<!-- ═══ 案例列表 ═══ -->
+<div class="container">
+
+<!-- Case 1: ODI备案 -->
+<div class="case-card" id="case1">
+    <div class="case-header">
+        <span class="case-tag tag-odi">ODI备案</span>
+        <span class="case-num">案例 #01</span>
+    </div>
+    <div class="case-title">深圳电子厂ODI被退3次，最终800万美元过审</div>
+    <div class="case-meta">
+        <div class="case-meta-item">🏭 <strong>行业</strong> 电子制造</div>
+        <div class="case-meta-item">🌏 <strong>目的地</strong> 越南</div>
+        <div class="case-meta-item">💰 <strong>投资额</strong> 800万美元</div>
+    </div>
+    <div class="case-bg">200人电子元器件企业，计划在越南设立组装厂。客户自己有外贸经验，觉得ODI备案"走个流程就行"，自己交了三次材料全被打回来。最终耗时5个月，在我们的协助下补齐关键材料后顺利获批。</div>
+    <div class="case-lessons">
+        <div class="case-lesson"><strong>可行性报告不能"模板化"</strong>——发改委对投资真实性审查越来越严，套模板的报告一眼就能看出，必须结合企业实际经营数据</div>
+        <div class="case-lesson"><strong>资金来源证明必须精确</strong>——银行流水和投资金额要逐笔对应，不能有模糊项</div>
+        <div class="case-lesson"><strong>境外合作方资信证明</strong>——越南方的营业执照、银行资信、租赁合同缺一不可，且需公证翻译</div>
+    </div>
+    <div class="case-actions">
+        <button class="btn btn-script" onclick="openScript('script1')">📹 口播脚本</button>
+        <a href="./出海工具合集.html#odi" class="btn btn-link">📋 相关工具 →</a>
+    </div>
+</div>
+
+<!-- Case 2: 跨境财税 -->
+<div class="case-card" id="case2">
+    <div class="case-header">
+        <span class="case-tag tag-tax">跨境财税</span>
+        <span class="case-num">案例 #02</span>
+    </div>
+    <div class="case-title">从25%→5%：新加坡架构帮跨境电商省了200万税</div>
+    <div class="case-meta">
+        <div class="case-meta-item">🛒 <strong>行业</strong> 跨境电商</div>
+        <div class="case-meta-item">🌏 <strong>架构</strong> 中国→新加坡</div>
+        <div class="case-meta-item">💰 <strong>节税</strong> 约200万/年</div>
+    </div>
+    <div class="case-bg">一家年营收5000万的跨境电商企业，此前通过香港公司走货，利润留在香港按16.5%缴税。我们帮其在新加坡设立区域总部，利用新加坡属地征税原则和税收协定网络，将有效税率降至约5%，第一年就省了200万。关键合规点：新加坡公司必须有实质经营——办公室、员工、董事会决议一个不能少。</div>
+    <div class="case-lessons">
+        <div class="case-lesson"><strong>香港≠最优解</strong>——香港对离岸收入免税但实操中很难获批，新加坡的税收协定网络和总部激励计划更友好</div>
+        <div class="case-lesson"><strong>实质重于形式</strong>——新加坡不是一个"注册就行"的避税地，必须派驻人员、租场地、开董事会</div>
+    </div>
+    <div class="case-actions">
+        <button class="btn btn-script" onclick="openScript('script2')">📹 口播脚本</button>
+        <a href="./出海工具合集.html#tax" class="btn btn-link">📋 相关工具 →</a>
+    </div>
+</div>
+
+<!-- Case 3: 架构设计 -->
+<div class="case-card" id="case3">
+    <div class="case-header">
+        <span class="case-tag tag-struct">架构设计</span>
+        <span class="case-num">案例 #03</span>
+    </div>
+    <div class="case-title">香港→新加坡→越南：三层架构差点翻车</div>
+    <div class="case-meta">
+        <div class="case-meta-item">🏗️ <strong>行业</strong> 制造+贸易</div>
+        <div class="case-meta-item">🌏 <strong>架构</strong> 三层控股</div>
+        <div class="case-meta-item">⚠️ <strong>教训</strong> 中间层被穿透</div>
+    </div>
+    <div class="case-bg">一家制造企业设计了"香港控股→新加坡中间层→越南运营"的三层架构，本意是隔离风险+节税。但新加坡中间层没有实际业务——零员工、零收入、零决策，被税务局认定为导管公司。最终架构简化：去掉新加坡层，香港直接控股越南。虽然税筹效果打了折扣，但至少合规了。</div>
+    <div class="case-lessons">
+        <div class="case-lesson"><strong>多余的中间层=风险</strong>——每加一层，必须有商业实质支撑，否则就是"导管公司"，容易被穿透征税</div>
+        <div class="case-lesson"><strong>先简单后复杂</strong>——出海初期先用两层架构跑通业务，等量起来再优化架构，不要一开始就"过度设计"</div>
+    </div>
+    <div class="case-actions">
+        <button class="btn btn-script" onclick="openScript('script3')">📹 口播脚本</button>
+        <a href="./出海工具合集.html#structure" class="btn btn-link">📋 相关工具 →</a>
+    </div>
+</div>
+
+<!-- Case 4: 东南亚 -->
+<div class="case-card" id="case4">
+    <div class="case-header">
+        <span class="case-tag tag-asia">东南亚</span>
+        <span class="case-num">案例 #04</span>
+    </div>
+    <div class="case-title">雅加达开厂：工签、用地、当地化三座大山</div>
+    <div class="case-meta">
+        <div class="case-meta-item">🏭 <strong>行业</strong> 纺织制造</div>
+        <div class="case-meta-item">🌏 <strong>目的地</strong> 印尼</div>
+        <div class="case-meta-item">👥 <strong>规模</strong> 300人</div>
+    </div>
+    <div class="case-bg">浙江一家纺织企业决定在雅加达郊区建厂，投资1200万美元。第一阶段最大的坑不是钱——是人。中国管理人员的工作签证被卡了两个月；印尼要求外资工厂至少雇佣90%本地工人，而当地技工需要三个月培训才能上手。最终通过印尼本地HR外包+提前派驻培训组，用6个月完成团队搭建。</div>
+    <div class="case-lessons">
+        <div class="case-lesson"><strong>工签提前3个月启动</strong>——印尼对外籍员工配额有严格限制，且审批周期长，不能到了再办</div>
+        <div class="case-lesson"><strong>当地化不是"降成本"</strong>——是法律规定，也是生存之道。培训成本要提前计入预算</div>
+    </div>
+    <div class="case-actions">
+        <button class="btn btn-script" onclick="openScript('script4')">📹 口播脚本</button>
+        <a href="./出海工具合集.html#seasia" class="btn btn-link">📋 相关工具 →</a>
+    </div>
+</div>
+
+<!-- Case 5: 中东 -->
+<div class="case-card" id="case5">
+    <div class="case-header">
+        <span class="case-tag tag-me">中东</span>
+        <span class="case-num">案例 #05</span>
+    </div>
+    <div class="case-title">沙特PIF拿融资：中国方案怎样说服中东LP</div>
+    <div class="case-meta">
+        <div class="case-meta-item">🤖 <strong>行业</strong> AI科技</div>
+        <div class="case-meta-item">🌏 <strong>目的地</strong> 沙特</div>
+        <div class="case-meta-item">💰 <strong>融资</strong> 500万美元</div>
+    </div>
+    <div class="case-bg">一家人工智能创业公司想拿沙特公共投资基金（PIF）的投资，起初用国内BP直接翻译成英文就去了。中东投资人看完说："你这计划书里没有一个字提到沙特愿景2030。"我们帮其重构BP：把AI产品与沙特的智慧城市计划对齐，加入本地化运营方案和在沙特设立中东总部的承诺。改完后第二次路演，拿到了500万美元种子轮。</div>
+    <div class="case-lessons">
+        <div class="case-lesson"><strong>中东不是"另一个市场"</strong>——必须研究沙特愿景2030、阿联酋2031等国家战略，把项目与之对齐</div>
+        <div class="case-lesson"><strong>信任比估值更重要</strong>——中东投资人看重的是长期关系和在本地扎根的承诺，不是单纯的财务回报</div>
+    </div>
+    <div class="case-actions">
+        <button class="btn btn-script" onclick="openScript('script5')">📹 口播脚本</button>
+        <button class="btn btn-link" disabled>📋 相关案例待补充</button>
+    </div>
+</div>
+
+<!-- Case 6: 拉美 -->
+<div class="case-card" id="case6">
+    <div class="case-header">
+        <span class="case-tag tag-latam">拉美</span>
+        <span class="case-num">案例 #06</span>
+    </div>
+    <div class="case-title">墨西哥建厂：文化差异差点让项目停摆</div>
+    <div class="case-meta">
+        <div class="case-meta-item">🚗 <strong>行业</strong> 汽车零部件</div>
+        <div class="case-meta-item">🌏 <strong>目的地</strong> 墨西哥</div>
+        <div class="case-meta-item">⚡ <strong>教训</strong> 劳资纠纷</div>
+    </div>
+    <div class="case-bg">一家汽车零部件企业在墨西哥新莱昂州建厂，为特斯拉供应链供货。前三个月一切顺利，第四个月突然被当地工会介入——原因是中方管理层按"中国节奏"要求加班，违反了墨西哥劳动法。工会提出集体谈判，工厂被迫停产两周。最终聘请了当地律师事务所和HR顾问，重新设计排班制度，每月与工会开一次沟通会，才稳定下来。</div>
+    <div class="case-lessons">
+        <div class="case-lesson"><strong>劳动法是第一道坎</strong>——拉美国家的劳工保护比中国严格得多，加班、解雇、福利都要从头学起</div>
+        <div class="case-lesson"><strong>工会不是敌人</strong>——拉美工会在企业运营中有法定地位，与其对抗不如建立定期沟通机制</div>
+        <div class="case-lesson"><strong>本地化管理团队</strong>——中国外派经理不懂当地文化，至少需要一名本地高管做缓冲层</div>
+    </div>
+    <div class="case-actions">
+        <button class="btn btn-script" onclick="openScript('script6')">📹 口播脚本</button>
+        <a href="./出海工具合集.html#seasia" class="btn btn-link">📋 相关工具 →</a>
+    </div>
+</div>
+
+<!-- ═══ 底部CTA ═══ -->
+<div class="cta-section">
+    <h2>你的出海项目遇到类似问题？</h2>
+    <p>扫码加摩西洪，1对1出海诊断<br>ODI备案 · 跨境架构 · 财税合规</p>
+    <a href="./index.html#qr" class="btn btn-script">📱 回首页扫码联系</a>
+</div>
+
+</div>
+
+<!-- ═══ 口播脚本模态层 ═══ -->
+
+<!-- Script 1 -->
+<div class="script-modal" id="script1">
+    <div class="script-box">
+        <button class="script-close" onclick="closeScript('script1')">✕</button>
+        <h3>🎬 口播脚本 · 30秒</h3>
+        <div class="script-meta">ODI备案 — 深圳电子厂被退3次</div>
+        <div class="script-vision">📷 画面建议：老板在办公室，半身镜头，桌上放一份ODI备案材料</div>
+        <div class="script-text">我有个客户，深圳做电子元器件的。想去越南开个组装厂，ODI备案自己交了三次，全被打回来。
+
+第一次，可行性研究报告一看就是套模板——发改委的人一天看几十份，是不是套模板他们一眼就能认出来。
+
+第二次，资金来源说不清楚——银行流水的数字跟投资金额对不上。
+
+第三次，越南那边合作方的资信证明没做公证翻译。
+
+最后我们帮他把这三样全补齐——5个月，800万美元，顺利过关。
+
+ODI备案不是难，是细节太多。关注守信出海，我带你少踩坑。</div>
+        <div class="script-stats">
+            <span>⏱ 约35秒</span><span>📝 约260字</span><span>🎯 抖音/视频号</span>
+        </div>
+        <button class="script-copy" onclick="copyScript(this)">📋 一键复制脚本</button>
+    </div>
+</div>
+
+<!-- Script 2 -->
+<div class="script-modal" id="script2">
+    <div class="script-box">
+        <button class="script-close" onclick="closeScript('script2')">✕</button>
+        <h3>🎬 口播脚本 · 30秒</h3>
+        <div class="script-meta">跨境财税 — 新加坡架构省200万税</div>
+        <div class="script-vision">📷 画面建议：写字楼背景，手持一杯咖啡，轻松专业</div>
+        <div class="script-text">有一个客户，跨境电商，一年做5000万。之前走香港，利润留在香港按16.5%交税。
+
+我们帮他做了一个新加坡架构——不是简单注册个公司，而是真正在新加坡设办公室、招人、开董事会。
+
+结果怎么样？有效税率从16.5%降到5%左右。第一年就省了200万。
+
+但关键来了——新加坡不是避税天堂。它要的是"实质经营"。你没办公室没员工，税务局一来查就穿帮。
+
+合规省钱，不是偷税省钱。关注守信出海，每周一个真实案例。</div>
+        <div class="script-stats">
+            <span>⏱ 约30秒</span><span>📝 约190字</span><span>🎯 抖音/视频号</span>
+        </div>
+        <button class="script-copy" onclick="copyScript(this)">📋 一键复制脚本</button>
+    </div>
+</div>
+
+<!-- Script 3 -->
+<div class="script-modal" id="script3">
+    <div class="script-box">
+        <button class="script-close" onclick="closeScript('script3')">✕</button>
+        <h3>🎬 口播脚本 · 30秒</h3>
+        <div class="script-meta">架构设计 — 三层架构翻车</div>
+        <div class="script-vision">📷 画面建议：白板画架构图，边画边讲</div>
+        <div class="script-text">很多老板一说出海就想着搭多层架构——香港上面套新加坡，新加坡下面再套越南。越复杂越安全，对吧？
+
+错了。我见过一个客户，香港→新加坡→越南三层架构。结果新加坡中间层——零员工、零收入、零决策。税务局一看就说：你这是导管公司。架构被穿透，税筹全部清零。
+
+多一层架构，就多一个被挑战的理由。每一层都得有"商业实质"——有人、有业务、有决策。
+
+出海初期，两层架构够了。先跑通业务，再优化架构。
+
+关注守信出海，我是摩西洪，做财税18年。</div>
+        <div class="script-stats">
+            <span>⏱ 约33秒</span><span>📝 约220字</span><span>🎯 抖音/视频号</span>
+        </div>
+        <button class="script-copy" onclick="copyScript(this)">📋 一键复制脚本</button>
+    </div>
+</div>
+
+<!-- Script 4 -->
+<div class="script-modal" id="script4">
+    <div class="script-box">
+        <button class="script-close" onclick="closeScript('script4')">✕</button>
+        <h3>🎬 口播脚本 · 30秒</h3>
+        <div class="script-meta">东南亚 — 雅加达开厂</div>
+        <div class="script-vision">📷 画面建议：户外/工厂场景，安全帽，干净利落</div>
+        <div class="script-text">浙江一个纺织厂老板，去印尼雅加达投了1200万建厂。钱准备好了，地也看好了，结果卡在哪？
+
+人。中国派过去的管理人员，工签被卡了整整两个月。印尼规定外资厂90%必须雇本地工人，可当地工人得培训三个月才能上手。
+
+这就是出海的现实——不是钱的问题，是人的问题。工签要提前三个月启动，培训成本要提前算进预算。
+
+出海第一关，不是市场和产品，是管人。关注守信出海，每周一个真案例。</div>
+        <div class="script-stats">
+            <span>⏱ 约28秒</span><span>📝 约185字</span><span>🎯 抖音/视频号</span>
+        </div>
+        <button class="script-copy" onclick="copyScript(this)">📋 一键复制脚本</button>
+    </div>
+</div>
+
+<!-- Script 5 -->
+<div class="script-modal" id="script5">
+    <div class="script-box">
+        <button class="script-close" onclick="closeScript('script5')">✕</button>
+        <h3>🎬 口播脚本 · 30秒</h3>
+        <div class="script-meta">中东 — 沙特融资</div>
+        <div class="script-vision">📷 画面建议：商务着装，现代办公室，自信</div>
+        <div class="script-text">有一个AI创业团队，想去沙特拿PIF投资。第一次路演，把国内的BP直接翻译成英文就去了。
+
+中东投资人看完只说了一句话："你这份计划书里，没有一个字提到沙特愿景2030。"
+
+这就是文化的差距。中东不是另一个市场，它是一个有自己国家战略的地方。
+
+我们帮他们把BP全部重构——把AI产品跟沙特智慧城市对齐，承诺在利雅得设立中东总部。第二次路演，500万美元种子轮到手。
+
+出海拿融资，不是翻译BP，是翻译战略。关注守信出海。</div>
+        <div class="script-stats">
+            <span>⏱ 约30秒</span><span>📝 约195字</span><span>🎯 抖音/视频号</span>
+        </div>
+        <button class="script-copy" onclick="copyScript(this)">📋 一键复制脚本</button>
+    </div>
+</div>
+
+<!-- Script 6 -->
+<div class="script-modal" id="script6">
+    <div class="script-box">
+        <button class="script-close" onclick="closeScript('script6')">✕</button>
+        <h3>🎬 口播脚本 · 30秒</h3>
+        <div class="script-meta">拉美 — 墨西哥建厂</div>
+        <div class="script-vision">📷 画面建议：办公桌前，表情严肃，强调重点</div>
+        <div class="script-text">一家汽车零部件厂，去墨西哥给特斯拉供货。头三个月一切正常，第四个月被工会堵门了。
+
+为什么？因为中方管理者按"中国节奏"安排加班。但在墨西哥，加班不是老板说加就加——劳动法保护比中国严得多。
+
+最后工厂停产两周，请了本地律师、雇了当地HR顾问、重新设计排班制度，每个月跟工会开一次沟通会，才稳下来。
+
+出海最大的坑不是政策不是税务——是人的问题。每个国家的人，工作方式完全不同。
+
+关注守信出海，我是摩西洪。</div>
+        <div class="script-stats">
+            <span>⏱ 约32秒</span><span>📝 约210字</span><span>🎯 抖音/视频号</span>
+        </div>
+        <button class="script-copy" onclick="copyScript(this)">📋 一键复制脚本</button>
+    </div>
+</div>
+
+<!-- ═══ Footer ═══ -->
+<div class="footer">
+    <div class="footer-nav">
+        <a href="./index.html">🏠 首页</a>
+        <a href="./出海工具合集.html">🧰 工具合集</a>
+        <a href="./案例库.html">📚 案例库</a>
+        <a href="./出海早报_2026-06-19.html">🌏 早报</a>
+    </div>
+    <p>守信出海 © 2026 · 本案例库内容基于真实客户经历脱敏处理</p>
+    <p>仅供参考，不构成法律/投资建议</p>
+</div>
+
+<script>
+function openScript(id) {
+    document.getElementById(id).classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+function closeScript(id) {
+    document.getElementById(id).classList.remove('show');
+    document.body.style.overflow = '';
+}
+function copyScript(btn) {
+    var box = btn.parentElement;
+    var text = box.querySelector('.script-text').innerText;
+    navigator.clipboard.writeText(text).then(function() {
+        btn.textContent = '✅ 已复制！打开抖音/剪映粘贴即可';
+        setTimeout(function(){ btn.textContent = '📋 一键复制脚本'; }, 2000);
+    });
+}
+// Close modal on background click
+document.querySelectorAll('.script-modal').forEach(function(m) {
+    m.addEventListener('click', function(e) {
+        if (e.target === m) closeScript(m.id);
+    });
+});
+// Category nav highlight on scroll
+(function() {
+    var nav = document.querySelector('.cat-nav');
+    var links = nav.querySelectorAll('a');
+    window.addEventListener('scroll', function() {
+        var scrollY = window.scrollY + 100;
+        var activeId = 'all';
+        document.querySelectorAll('.case-card').forEach(function(card) {
+            if (card.offsetTop <= scrollY) {
+                var tags = card.querySelector('.case-tag');
+                if (tags) {
+                    var cls = tags.className.split(' ').find(function(c){return c.startsWith('tag-')});
+                    if (cls) activeId = cls.replace('tag-','');
+                }
+            }
+        });
+        links.forEach(function(l) {
+            l.classList.remove('active');
+            if (l.getAttribute('href') === '#' + activeId) l.classList.add('active');
+        });
+    });
+})();
+</script>
+
+</body>
+</html>
